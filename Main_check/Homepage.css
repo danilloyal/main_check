@@ -60,6 +60,7 @@ body{
 .navigation ul li a:hover{
     color: var(--butons);
 }
+
 .menu{
   cursor: pointer; 
   display: none; 
@@ -73,6 +74,19 @@ body{
     margin: 5px auto;
     transition: all 0.3s;
 
+
+}
+.log-item{
+    padding: 10px 25px;
+    background: var(--butons);
+    color: var(--text);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.log-item:hover{
+    color: var(--text);
+    background-color: var(--destaque_pos);
 }
 .menu .bar:nth-child(1),
 .menu .bar:nth-child(3){
@@ -90,12 +104,12 @@ body{
 }
 .home-text{
     max-width: 37rem;
-    margin-right:250px;
+    
    
 
 }
 .home-text .text-h4{
-    font-size:1.5rem;
+    font-size:2rem;
     color:var(--principal);
     margin-bottom: 1rem;
 }
@@ -107,20 +121,89 @@ body{
 .home-text p{
     margin-bottom: 4rem;
     margin-top: 2rem;
+    text-align:justify;
 }
 .home-btn{
-    padding: 15px 45px;
+    padding: 20px 50px;
     background: var(--butons);
     color: var(--text);
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: 900;
     transition: all 0.5s;
+    
 }
 .home-btn:hover{
     background: var(--destaque_pos);
 }
 .home img{
-    width: 100%;
+    width: 80%;
     border-radius: 80px;
+    margin-left: 9rem;
+     
+}
+@media(max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display:block;
+    
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--fundo);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+            margin: 16px 0;
+
+    }
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home-btn{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .home img{
+        margin-left: 0;
+        width: 101%
+         
+    }
+    .home .text-h4{
+        font-size: 20px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+        text-align: justify;
+
+    }
      
 }
