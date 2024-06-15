@@ -149,6 +149,9 @@ body{
     padding: 10px;
     text-align: center;
 }
+.gambi :hover{
+    color: var(--principal);
+}
 
 @media(max-width:785px) {
     .navigation{
