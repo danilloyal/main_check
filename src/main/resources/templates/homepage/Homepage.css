@@ -1,6 +1,4 @@
-Main_check/images/android-chrome-512x512.png{
-    border-radius: 100px;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -54,7 +52,6 @@ body{
 }
 .navigation ul li a{
     color: var(--text);
-    font-size: 17 px;
     font-weight: 500;
     transition: all 0.5s;
 
@@ -178,7 +175,7 @@ body{
         height: 100%;
         flex-direction: column;
         background: var(--fundo);
-        gap: -10px;
+        gap: 10px;
         transition: 0.3s;
     }
     .nav-menu.ativo{

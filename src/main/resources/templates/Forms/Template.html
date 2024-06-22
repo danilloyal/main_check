@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Formulários</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+
+    <script src="/js/script.js"></script>
+
+    <div id="form-builder">
+      <h1>Criador de Formulários</h1>
+      <div id="form-elements">
+        <input type="text" id="form-name" placeholder="Nome do Formulário">
+        <input type="text" id="element-name" placeholder="Nome do Elemento">
+        <select id="element-type" onchange="toggleOptionInput()">
+          <option value="">Selecione o Tipo de Campo</option>
+          <option value="text">Campo de Texto</option>
+          <option value="textarea">Área de Texto</option>
+          <option value="select">Lista Suspensa</option>
+          <option value="checkbox">Caixa de Seleção</option>
+          <option value="file">Upload de Arquivo</option>
+          <option value="date">Seletor de Data</option>
+          <option value="time">Seletor de Horário</option>
+        </select>
+        <div id="select-options" style="display: none;">
+          <input type="text" id="new-option" placeholder="Nova Opção">
+          <button type="button" onclick="addOption()">Adicionar Opção</button>
+          <div id="current-options"></div>
+        </div>
+        <button id="confirm-element" style="display: inline-block;" onclick="confirmElement()">Confirmar Elemento</button>
+      </div>
+      <div id="form-preview">
+        <h2>Visualização do Formulário</h2>
+        <form id="custom-form"></form>
+      </div>
+      <button onclick="saveForm()">Salvar Formulário</button>
+    </div>
+
+  </body>
+
+</html>
